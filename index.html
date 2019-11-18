@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>codejam-image-api</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+    <div class="panels">
+        <div class= "panel-instruments">
+            <div class="panel-elements">
+                <button class="panel-element panel-element--bucket" id="fillBucket">Fill bucket</button>
+                <input  type="color" value="#ff0000" id="chooseColor">
+                <label class="panel-element panel-element--choice" for="chooseColor">Choose color</label>
+                <button class="panel-element panel-element--active panel-element--pencil">Pencil</button>
+            </div>
+            <div class="panel-elements">
+                <button class="panel-element panel-element--moving">Move</button>
+                <button class="panel-element panel-element--transformation">Transform</button>
+            </div>
+        </div>
+        <div class= "panel-instruments">
+            <div class="panel-elements panel-elements--colors"> 
+                <div class="color-container">
+                    <div class = "icon-wrapper">
+                        <input  type="color" class="panel-element--current-icon" value="#00ff00" id="current-color">
+                    </div>
+                <label class="panel-element panel-element--current-color" for="current-color">Current color</label>
+                </div>
+                <div class="color-container">
+                    <div class = "icon-wrapper">
+                        <input  type="color" class="panel-element--previous-icon"  value="#ffc000" id="previous-color" disabled>  
+                    </div>
+                    <button class="panel-element panel-element--previous-color">Prev color</button>
+                </div>
+            </div>
+            <div class="panel-elements">
+                <button class="panel-element panel-element--red">red</button>
+                <button class="panel-element panel-element--blue">blue</button>
+            </div> 
+            <button id="cleanCanvas">Clean canvas</button>
+        </div>
+    </div>
+    <div class="canvas-container">
+        <div class="buttons-container">
+            <button class="download-image" id="load">Load</button>
+            <input type="search" class="search-city" id="search" value="Minsk">
+            <button class="color-image" id="grayscalebtn">B&W</button>
+        </div> 
+        <canvas id='canvas'></canvas>
+        <div class="buttons-scales">
+            <button class="button-scale button-4 button-scale--active" id='button-4'>4x4</button>
+            <button class="button-scale button-2" id='button-2'>2x2</button>
+            <button class="button-scale  button-1" id='button-1'>1x1</button>
+        </div>
+    </div>
+</div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

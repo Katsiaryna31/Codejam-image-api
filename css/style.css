@@ -1,0 +1,266 @@
+body {
+  width: 1400px;
+  padding: 50px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panel-instruments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+.panel-elements {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 27px;
+}
+
+.panel-element {
+  margin: 10px;
+  padding-left: 35px;
+  width: 140px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.panel-element--active {
+  background-color: #ffc000;
+}
+
+.panel-element--bucket::before {
+  content:"";
+  width: 20px;
+  height: 18px;
+  background-image: url(../data/paint-bucket.svg);
+  background-size: 20px 18px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+#chooseColor {
+  position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.panel-element--choice::before {
+  content:"";
+  width: 24px;
+  height: 24px;
+  background-image: url(../data/dropper.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.panel-element--pencil::before {
+  content:"";
+  width: 24px;
+  height: 24px;
+  background-image: url(../data/pencil.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.panel-element--moving::before {
+  content:"";
+  width: 24px;
+  height: 24px;
+  background-image: url(../data/move.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.panel-element--transformation::before {
+  content:"";
+  width: 24px;
+  height: 24px;
+  background-image: url(../data/transform.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.color-container {
+  position: relative;
+}
+
+.icon-wrapper {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid #111111;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.panel-element--current-icon {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -7px;
+  left: -10px;
+}
+
+.panel-element--current-color {
+  padding: 10px;
+  padding-left: 45px;
+  margin: 0;
+}
+
+.panel-element--previous-icon {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -7px;
+  left: -10px;
+}
+
+.panel-element--previous-color {
+  padding: 10px;
+  padding-left: 45px;
+  margin: 0;
+ 
+}
+
+.panel-element--red::before {
+  content:"";
+  width: 20px;
+  height: 20px;
+  background: #F74141;
+  background-size: 20px 20px;
+  border: 1px solid #111111;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.panel-element--blue::before {
+  content:"";
+  width: 20px;
+  height: 20px;
+  background: #41B6F7;
+  background-size: 20px 20px;
+  border: 1px solid #111111;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canvas {
+  border: 1px solid black;
+  width: 512px;
+  height: 512px;
+  image-rendering: pixelated;
+}
+
+.buttons {
+  float: right;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+img {
+  image-rendering: pixelated;
+
+}
+
+.download-image,
+.color-image,
+.button-scale {
+  width: 100px;
+  padding: 7.5px 10px;
+  margin-bottom: 20px;
+  background: #41B6F7;
+  color: #ffffff;
+  border: none;
+}
+
+.search-city {
+  width: 184px;
+  height: 31px;
+  padding-left: 20px;
+  border: 1px solid #767676;
+  background-image: url(../data/search.svg);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 4px center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-scales {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-scale--active {
+  background: rgb(6, 82, 122);
+}
